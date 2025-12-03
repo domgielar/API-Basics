@@ -27,3 +27,4 @@ gamefinder = leaguegamefinder.LeagueGameFinder(team_id_nullable=id_celtics)
 gamefinder.get_json()
 games = gamefinder.get_data_frames()[0]
 print(games.head())
+
