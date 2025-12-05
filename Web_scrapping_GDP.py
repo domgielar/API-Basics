@@ -12,4 +12,16 @@ data = pd.read_html(response.text)
 df=data[2]
 #print(df)
 df.columns=range(df.shape[1])
-print(df)
+
+#How to Capture specific columns in DataFrames
+df2 =pd.DataFrame(df[[0,2]])
+
+
+#How to ACCESS rows in dataFrames
+df2 =df2.iloc[1:11]
+
+#How to CHANGE COLUMNS
+df2.columns =["Country", "GDP (Millions USD)"]
+print(df2)
+
+
