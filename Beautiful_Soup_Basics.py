@@ -9,3 +9,7 @@ print(soup.prettify())
 
 tag_object=soup.title
 print("Title: ",type(tag_object))
+
+
+#table_bs.findall(id="boldest")
+
