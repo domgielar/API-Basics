@@ -22,6 +22,19 @@ df2 =df2.iloc[1:11]
 
 #How to CHANGE COLUMNS
 df2.columns =["Country", "GDP (Millions USD)"]
+
+
+#How to CHANGE from Int or float
+df2["GDP (Millions USD)"] = df2["GDP (Millions USD)"].astype(int)
+
+#Doing an Equation on a WHOLE column
+df2["GDP (Millions USD)"] = df2["GDP (Millions USD)"]/1000
+
+#ROUNDING WHOLE column to 2 decimal places
+df2["GDP (Millions USD)"] = np.round(df2["GDP (Millions USD)"], 2)
+
+df2 = df2.rename(columns={"GDP (Millions USD)": "GDP(Billions USD)" })
+
+df2.to_csv("Largest_economies.csv")
+df2=pd.read_csv("Largest_economies.csv")
 print(df2)
-
-
